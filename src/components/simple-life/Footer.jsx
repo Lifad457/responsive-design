@@ -1,8 +1,11 @@
+import { Container } from "../../styles/simple-life/footer-styles.css"
+
 function Footer() {
     return (
-        <>
-            <h1>Footer</h1>
-        </>
+        <Container>
+            <h2>Living the Simple Life</h2>
+            <p>Copyright 2019</p>
+        </Container>
     )
 }
 export default Footer
