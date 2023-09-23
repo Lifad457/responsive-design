@@ -3,6 +3,7 @@ import life from "../../assets/images/simple-life/life.jpg"
 import food from "../../assets/images/simple-life/food.jpg"
 import work from "../../assets/images/simple-life/work.jpg"
 import deco from "../../assets/images/simple-life/deco.jpg"
+import about from "../../assets/images/simple-life/about-me.jpg"
 import { Link } from "react-router-dom"
 
 function Home() {
@@ -11,21 +12,54 @@ function Home() {
             , {id: 3, img: work, dt: "July 12, 2019", comments: 3, title: "Simplicity and work", text: "Work is often a major source of stress. People get frustrated, it ruins their relationship with others and it leads to burnout. By keeping your work life as simple as possible, it will help balance everything out."}
             , {id: 4, img: deco, dt: "July 3, 2019", comments: 3, title: "Simple decorations", text: "A home isn't a home until you've decorated a little. People either don't decorate, or they go overboard and it doesn't have the impact they were hoping for. Staying simple will help draw the eye where you want it to and make things pop like never before."}
         ]
-
-    const postElements = posts.map(post => (
+    
+    let cpt = 0;
+    const postElements = posts.map(post => {
+        cpt++
+        return (
             <div key={post.id} className="post">
                 <img src={post.img} alt="" />
-                <h1>{post.title}</h1>
-                <p className="dt-post">{post.dt}</p>
-                <p className="nb-comments">{post.comments}</p> 
+                <div className="title">
+                    <p className="dt-post">{post.dt} | {post.comments} comments</p>
+                    <h1>{post.title}</h1>
+                </div>
                 <p className="desc">{post.text}</p>
-                <Link to={'.'}>CONTINUE READING</Link>
+                <Link to='.'>CONTINUE READING</Link>
+                {cpt == 1 && <div className="separator"></div>}
             </div>
-        ))
+        )
+    })
+
+    cpt = 0
+    const recentPostElements = posts.map(post => {
+        cpt++
+        if (cpt < 4) {
+            return (
+                <div key={post.id} className="recent-post">
+                    <img src={post.img} alt="" />
+                    <h2>{post.title}</h2>
+                    {cpt < 3 && <div className="separator"></div>}
+                </div>
+            )
+        }
+        else {
+            return null
+        }
+    })
 
     return (
         <Container>
             { postElements }
+
+            <div className="frame">
+                <img className="img-me" src={about} />
+                <p>I find life better, and I&apos;m happier, when things are nice and simple.</p>
+            </div>
+
+            <div className="frame recent">
+                <h1>RECENT POSTS</h1>
+                { recentPostElements }
+            </div>
         </Container>
     )
 }

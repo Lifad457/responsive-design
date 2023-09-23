@@ -5,6 +5,7 @@ export const Container = styled.footer`
     width: 100%;
     text-align: center;
     padding: 2.2em;
+    margin: 0;
 
     h2 {
         font-weight: 700;
