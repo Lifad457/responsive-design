@@ -2,10 +2,15 @@ import styled from 'styled-components'
 
 export const Container = styled.header`
     background: #F8F8F8;
-    padding: 2em 0;
-    display: flex;
-    flex-direction: column;
-    text-align: center;
+
+    .header {
+        padding: 2em 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        max-width: 1200px;
+        margin: 0 auto;
+    }
 
     h1 {
         margin: 0;
@@ -45,9 +50,11 @@ export const Container = styled.header`
     }
 
     @media screen and (min-width: 900px) {
-        padding: 5em 2em;
-        flex-direction: row;
-        justify-content: space-between;
+        .header {
+            padding: 5em 2em;
+            flex-direction: row;
+            justify-content: space-between;
+        }        
 
         ul {
             display: flex;

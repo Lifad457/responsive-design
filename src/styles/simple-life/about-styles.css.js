@@ -1,7 +1,9 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    padding: 2em 1em;
+    padding: 2em 2em;
+    max-width: 1200px;
+    margin: 0 auto;
 
     .about-img {
         width: 100%;
