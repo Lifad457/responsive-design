@@ -1,7 +1,9 @@
+import Home from "./Home"
+
 function RecentPosts() {
     return (
         <>
-            <h1>Recnt Posts</h1>
+            <Home />
         </>
     )
 }

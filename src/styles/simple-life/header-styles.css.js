@@ -43,6 +43,23 @@ export const Container = styled.header`
     a.active {
         border-bottom: 2px solid #707070;
     }
+
+    @media screen and (min-width: 900px) {
+        padding: 5em 2em;
+        flex-direction: row;
+        justify-content: space-between;
+
+        ul {
+            display: flex;
+            justify-content: space-between;
+            margin: 0;
+            padding: 0;
+        }
+
+        li {
+            margin-left: 2em;
+        }
+    }
 `
 
 

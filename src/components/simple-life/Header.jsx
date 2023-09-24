@@ -4,9 +4,10 @@ import { Container } from "../../styles/simple-life/header-styles.css"
 function Header() {
     return (
         <Container>
-            <h1>Living the simple life</h1>
-            <p>A BLOG EXPLORING MINIMALISM IN LIFE</p>
-
+            <div className="logo">
+                <h1>Living the simple life</h1>
+                <p>A BLOG EXPLORING MINIMALISM IN LIFE</p>
+            </div>
             <nav>
                 <ul>
                     <li><NavLink to='.' end>HOME</NavLink></li>
