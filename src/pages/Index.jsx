@@ -16,6 +16,7 @@ function Index() {
                 <h1>Responsive Design : </h1>
                 <Links>
                     <Link to='simple-life'>Simple Life</Link>
+                    <Link to='bbq'>BBQ</Link>
                 </Links>
             </Container>
         </>
