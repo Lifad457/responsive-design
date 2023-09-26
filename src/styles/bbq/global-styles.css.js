@@ -5,7 +5,8 @@ const GlobalStyle = createGlobalStyle`
         --ff-primary: 'Source Sans Pro', sans-serif;
 
         --fw-reg: 400;
-        --fw-bold: 900;
+        --fw-bold: 700;
+        --fw-black: 900;
 
         --fs-l-h1: 3.5rem;
         --fs-l-h2: 1.75rem;
@@ -15,7 +16,7 @@ const GlobalStyle = createGlobalStyle`
         --fs-s-h2: 1.3125rem;
         --fs-s-body: 1rem;
 
-        --fs-small: 0.625rem
+        --fs-small: 0.625rem;
         
         --clr-light: #fff;
         --clr-primary: #F18119;
@@ -25,7 +26,8 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: var(--ff-primary);
         font-size: var(--fs-s-body);
-        line-height: 1.6;
+        line-height: 1.4;
+        letter-spacing: 1.4px;
     }
 `
 export default GlobalStyle
