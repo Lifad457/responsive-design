@@ -18,11 +18,11 @@ export default function Home () {
                     <h2 className="right-col-subtitle">REGISTER TODAY</h2>
                     <p className="right-col-desc">BBQ isn&apos;t just standing in front of your grill with it on full blast and hoping for the best. It&apos;s an art! One way to speed up the process is to learn from the best. You can do just that by signing up for this free webinar!</p>
                     <div className="form">
-                        <div className="f-name">first name</div>
-                        <div className="email">email</div>
-                        <div className="register">register</div>
-                        <p className="disclaimer">We&apos;ll never share your information\nwithout your permission</p>
+                        <input placeholder="first name" type="text" className="f-name" />
+                        <input placeholder="email" type="text" className="email" />
+                        <button className="register">register</button>
                     </div>
+                    <p className="disclaimer">We&apos;ll never share your information<br />>without your permission</p>
                 </RightCol>
             </Container>
         </>

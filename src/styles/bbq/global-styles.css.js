@@ -26,8 +26,6 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: var(--ff-primary);
         font-size: var(--fs-s-body);
-        line-height: 1.4;
-        letter-spacing: 1.4px;
     }
 `
 export default GlobalStyle
