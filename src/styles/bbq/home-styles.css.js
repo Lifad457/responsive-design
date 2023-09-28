@@ -33,7 +33,7 @@ export const LeftCol = styled.div`
     justify-content: space-between;
     background: url(${bbqBg}) no-repeat;
     background-size: cover;
-    height: 40vh;
+    min-height: 40vh;
     letter-spacing: 1.4px;
     line-height: 1.4;
     
@@ -140,7 +140,7 @@ export const RightCol = styled.div`
     }
 
     @media screen and (min-width: 750px) {
-        width: 40%;
         margin: auto 2em;
+        width: 40%;
     }
 `
