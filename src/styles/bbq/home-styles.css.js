@@ -96,7 +96,7 @@ export const RightCol = styled.div`
         margin-bottom: 2.5em;
     }
 
-    .form {
+    form {
         display: flex;
         flex-direction: column;
         margin: 0 3em;
