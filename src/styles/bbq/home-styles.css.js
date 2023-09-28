@@ -140,7 +140,10 @@ export const RightCol = styled.div`
     }
 
     @media screen and (min-width: 750px) {
-        margin: auto 2em;
+        min-height: 100vh;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
         width: 40%;
     }
 `
