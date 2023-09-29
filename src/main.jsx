@@ -9,6 +9,7 @@ import SplHome from './pages/simple-life/Home'
 import About from './pages/simple-life/About'
 import RecentPosts from './pages/simple-life/RecentPosts'
 import BbqHome from './pages/bbq/Home'
+import Card from './pages/card/Card'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
@@ -19,6 +20,7 @@ const router = createBrowserRouter(createRoutesFromElements(
         <Route element={<RecentPosts />} path='recent-posts' />
       </Route>
       <Route element={<BbqHome />} path='bbq' />
+      <Route element={<Card />} path='card' />
     <Route path='*' element={<NotFound />} />
   </Route>
 ))
