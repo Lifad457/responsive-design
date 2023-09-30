@@ -8,12 +8,12 @@ const GlobalStyle = createGlobalStyle`
         --fw-bold: 700;
         --fw-black: 900;
 
-        --fs-l-title: 2.25rem;
-        --fs-l-body: 1.125rem;
-        --fs-l-button: 1.25rem;
+        --fs-l-title: 2.95rem;
+        --fs-l-body: 1.525rem;
+        --fs-l-button: 1.85rem;
 
-        --fs-s-title: 1.75rem;
-        --fs-s-body: 1rem;
+        --fs-s-title: 2.25rem;
+        --fs-s-body: 1.125rem;
         --fs-s-button: 1.25rem;
 
         --fs-small: 0.625rem;
@@ -26,9 +26,6 @@ const GlobalStyle = createGlobalStyle`
     body {
         font-family: var(--ff-primary);
         background-color: var(--clr-primary);
-
-        display: flex;
-        flex-direction: column;
     }
 `
 export default GlobalStyle

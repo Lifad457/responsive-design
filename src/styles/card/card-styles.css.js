@@ -1,43 +1,73 @@
 import styled from 'styled-components'
 import Bg from '../../assets/images/card/tech.jpg'
 
+export const FlexContainer = styled.div`
+    display: flex;
+    flex-direction: column;
+    min-width: 350px;
+    min-height: 650px;
+
+    @media screen and (min-width: 900px){
+        flex-direction: row;
+    }
+`
+
 export const LeftCol = styled.div`
-    min-height: 30vh;
+    height: 30vh;
     background: url(${Bg}) no-repeat;
     background-size: cover;
     background-position: center;
-    
+
+    @media screen and (min-width: 900px){
+        height: 100vh;
+        width: 40vw;
+    }
 `
 
 export const RightCol = styled.div`
     display: flex;
     flex-direction: column;
-    min-height: 70vh;
     padding: 2em;
+    height: 70vh;
+
+    @media screen and (min-width: 900px){
+        padding: 3em;
+        height: 100vh;
+        width: 60vw;
+    }
 `
 
 export const Title = styled.h1`
-    font-size: var(--fs-l-title);
+    font-size: var(--fs-s-title);
     font-weight: var(--fw-bold);
     color: var(--clr-secondary);
+
+    @media screen and (min-width: 900px){
+        font-size: var(--fs-l-title);
+        margin-top: auto;
+    }
 `
 
 export const Desc = styled.p`
-    font-size: var(--fs-l-body);
+    font-size: var(--fs-s-body);
     color: var(--clr-light);
-    line-height: 2.4;
+    line-height: 2;
     letter-spacing: .1em;
     opacity: 0.8;
+
+    @media screen and (min-width: 900px){
+        font-size: var(--fs-l-body);
+    }
 `
 
-export const Container = styled.div`
+export const Footer = styled.div`
     display: flex;
     justify-content: space-between;
     margin-top: auto;
 `
 
 export const Etc = styled.p`
-    font-size: var(--fs-l-body);
+    font-size: var(--fs-s-body);
     color: var(--clr-light);
     opacity: 0.6;
     width: 2em;
@@ -45,18 +75,30 @@ export const Etc = styled.p`
     margin-bottom: 0;
     
     strong {
-        font-size: var(--fs-l-title);
+        font-size: var(--fs-s-title);
         font-weight: var(--fw-bold);
+    }
+
+    @media screen and (min-width: 900px){
+        font-size: var(--fs-l-body);
+
+        strong {
+            font-size: var(--fs-l-title);
+        }
     }
 `
 
 export const Btn = styled.input`
     display: inline-block;
     align-self: flex-end;
-    font-size: var(--fs-l-button);
+    font-size: var(--fs-s-button);
     font-weight: var(--fw-black);
     color: var(--clr-primary);
     background-color: var(--clr-secondary);
     padding: 0.6em 1.8em;
     border: none;
+
+    @media screen and (min-width: 900px){
+        font-size: var(--fs-l-button);
+    }
 `
