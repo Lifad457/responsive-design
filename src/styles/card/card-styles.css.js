@@ -6,6 +6,7 @@ export const FlexContainer = styled.div`
     flex-direction: column;
     min-width: 350px;
     min-height: 650px;
+    height: 100vh;
 
     @media screen and (min-width: 900px){
         flex-direction: row;
@@ -13,27 +14,20 @@ export const FlexContainer = styled.div`
 `
 
 export const LeftCol = styled.div`
-    height: 30vh;
     background: url(${Bg}) no-repeat;
     background-size: cover;
     background-position: center;
-
-    @media screen and (min-width: 900px){
-        height: 100vh;
-        width: 40vw;
-    }
+    flex-basis: 40%;
 `
 
 export const RightCol = styled.div`
     display: flex;
     flex-direction: column;
     padding: 2em;
-    height: 70vh;
+    flex-basis: 60%;
 
     @media screen and (min-width: 900px){
         padding: 3em;
-        height: 100vh;
-        width: 60vw;
     }
 `
 
