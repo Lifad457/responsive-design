@@ -18,6 +18,7 @@ function Index() {
                     <Link to='simple-life'>Simple Life</Link>
                     <Link to='bbq'>BBQ</Link>
                     <Link to='card'>Card</Link>
+                    <Link to='final-project'>Final Project</Link>
                 </Links>
             </Container>
         </>

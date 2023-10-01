@@ -10,6 +10,10 @@ import About from './pages/simple-life/About'
 import RecentPosts from './pages/simple-life/RecentPosts'
 import BbqHome from './pages/bbq/Home'
 import Card from './pages/card/Card'
+import FinalProjectLayout from "./components/final-project/Layout"
+import Home from './pages/final-project/Home'
+import FinalProjectAbout from './pages/final-project/About'
+import FinalProjectContact from './pages/final-project/Contact'
 
 const router = createBrowserRouter(createRoutesFromElements(
   <Route path='/' element={<Layout />}>
@@ -21,6 +25,11 @@ const router = createBrowserRouter(createRoutesFromElements(
       </Route>
       <Route element={<BbqHome />} path='bbq' />
       <Route element={<Card />} path='card' />
+      <Route element={<FinalProjectLayout />} path='final-project'>
+        <Route index element={<Home />} />
+        <Route element={<FinalProjectAbout />} path='about' />
+        <Route element={<FinalProjectContact />} path='contact' />
+      </Route>
     <Route path='*' element={<NotFound />} />
   </Route>
 ))
