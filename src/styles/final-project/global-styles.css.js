@@ -23,7 +23,11 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: var(--ff-primary);
-        background-color: var(--clr-light);
+        background-color: var(--clr-dark);
+        color: var(--clr-light);
+
+        padding-left: 1.7em;
+        padding-right: 1.7em;
     }
 `
 export default GlobalStyle
