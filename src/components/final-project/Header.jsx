@@ -1,28 +1,29 @@
-import { Burger, Container, Logo, Navigation } from "../../styles/final-project/header.styles.css";
+import { Burger, Container, Logo, Menu, Navigation } from "../../styles/final-project/header-styles.css";
 import logo from '../../assets/images/final-project/logo.png'
 import { NavLink } from "react-router-dom";
 import { useState } from "react";
 
 export default function Header() {
     const [switchMenu, setSwitchMenu] = useState(false);
-    console.log(switchMenu);
 
     return (
         <Container>
             <Logo>
                 <img alt="logo" src={logo} />
             </Logo>
-            <Burger onClick={() => setSwitchMenu(!switchMenu)} switchMenu={switchMenu}></Burger>
-            <Navigation switchMenu={switchMenu}>
+            <Menu onClick={() => setSwitchMenu(!switchMenu)}>
+                <Burger $switchmenu={switchMenu.toString()} ></Burger>
+            </Menu>
+            <Navigation $switchmenu={switchMenu.toString()}>
                 <ul>
                     <li>
-                        <NavLink to='.'>home</NavLink>
+                        <NavLink to='.' onClick={() => setSwitchMenu(!switchMenu)}>home</NavLink>
                     </li>
                     <li>
-                        <NavLink to='./about'>about us</NavLink>
+                        <NavLink to='./about' onClick={() => setSwitchMenu(!switchMenu)}>about us</NavLink>
                     </li>
                     <li>
-                        <NavLink to='./contact'>contact</NavLink>
+                        <NavLink to='./contact' onClick={() => setSwitchMenu(!switchMenu)}>contact</NavLink>
                     </li>
                 </ul>
             </Navigation>

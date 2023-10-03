@@ -3,6 +3,8 @@ import styled, {css} from 'styled-components'
 export const Container = styled.header`
     display: flex;
     justify-content: space-between;
+
+    padding-left: 2em;
 `
 
 export const Logo = styled.div`
@@ -15,46 +17,50 @@ export const Logo = styled.div`
     }
 `
 
+export const Menu = styled.div`
+    padding: 2em;
+    cursor: pointer;
+    z-index: 99;
+`
+
 export const Burger = styled.div`
     display: inline-block;
     position: relative;
-    margin: auto 0;
     background-color: var(--clr-light);
     border-radius: 2em;
     width: 30px;
     height: 2px;
-    z-index: 99;
     transform-origin: center;
-    transition: all 0.1s ease;
+    transition: all .1s ease;
 
-    &:before,
-    &:after {
+    &::before,
+    &::after {
         content: '';
+        position: absolute;
+        z-index: 99;
         background-color: var(--clr-light);
         border-radius: 2em;
         width: 30px;
         height: 2px;
-        position: absolute;
-        z-index: 99;
     }
 
-    &:before {
-        top: -7px;
+    &::before {
+        bottom: 7px;
     }
 
-    &:after {
+    &::after {
         top: 7px;
     }
 
-    ${props => props.switchMenu && css `
+    ${props => props.$switchmenu == 'true' && css `
             transform: rotate(45deg);
             width: 20px;
-            &:before {
+            &::before {
                 transform: rotate(-90deg);
                 top: 0;
                 width: 20px;
             }
-            &:after {
+            &::after {
                 display: none;
             }
         `
@@ -72,7 +78,6 @@ export const Navigation = styled.div`
     z-index: 98;
     background-color: var(--clr-dark);
     transform: translateX(0%);
-    transition: transform .3s;
     padding: 5em 2em;
     text-align: end;
 
@@ -88,7 +93,8 @@ export const Navigation = styled.div`
         padding-bottom: 2em;
     }
 
-    ${ props => !props.switchMenu && css `
+    ${ props => props.$switchmenu == 'false' && css `
+            display: none;
             transform: translateX(100%);
         `
     }
