@@ -1,12 +1,47 @@
 import styled from 'styled-components'
 
-export const Container = styled.div`
-    position: fixed;
-    bottom: 0;
-    background: var(--clr-grey);
-
+export const Container = styled.footer`
     display: flex;
     flex-direction: column;
-
+    background: var(--clr-grey);
+    width: 100%;
     text-align: center;
+    padding: 0 2em;
+
+    .social-list {
+        list-style: none;
+        display: flex;
+        justify-content: center;
+        margin: 2em 0 1em;
+        padding: 0;
+    }
+
+    .social-list-item {
+        margin: 0 .5em;
+    }
+
+    .social-list-link {
+        padding: .2em;
+        color: var(--clr-dark);
+        font-size: 1.5em;
+    }
+    
+    img {
+        opacity: .5;
+        margin-bottom: .5em;
+        object-fit: cover;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    p {
+        color: var(--clr-dark);
+        opacity: .8;
+        font-size: var(--fs-extra-small);
+    }
+
+    .copyright { 
+        margin: 2em;
+        font-size: var(--fs-extra-small);
+    }
 `

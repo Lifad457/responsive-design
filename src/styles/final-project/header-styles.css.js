@@ -18,7 +18,7 @@ export const Logo = styled.div`
 `
 
 export const Menu = styled.div`
-    padding: 2em;
+    padding: 2em 2em 0;
     cursor: pointer;
     z-index: 99;
 `
@@ -78,7 +78,7 @@ export const Navigation = styled.div`
     z-index: 98;
     background-color: var(--clr-dark);
     transform: translateX(0%);
-    padding: 5em 2em;
+    padding: 5em 2em 0;
     text-align: end;
 
     a {

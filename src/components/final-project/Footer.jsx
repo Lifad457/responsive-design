@@ -24,9 +24,9 @@ export default function Footer() {
                     </li>
                 </ul>
 
-            <img src={logo} />
+            <img src={logo} alt="logo" />
             <p>etus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
-            <p>©coolbrandname 2019</p>
+            <p className="copyright">©coolbrandname 2019</p>
         </Container>
     )
 }
