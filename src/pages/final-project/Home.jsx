@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { LowerPart, UpperPart } from "../../styles/final-project/home-style.css";
+import { LowerPart, UpperPart } from "../../styles/final-project/home-styles.css";
 
 export default function Home() {
     return (
@@ -10,7 +10,12 @@ export default function Home() {
                 <Link to="contact">contact us</Link>
             </UpperPart>
             <LowerPart>
-                <h2>Lower</h2>
+                <h1>About Me</h1>
+                <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
+                <h1>Our skills</h1>
+                <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
+                <h1>Get in touch</h1>
+                <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
             </LowerPart>
         </>
     )

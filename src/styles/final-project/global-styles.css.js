@@ -9,6 +9,7 @@ const GlobalStyle = createGlobalStyle`
         --fw-bold: 700;
         --fw-black: 900;
 
+        --fs-extra-big: 2.938rem;
         --fs-big: 1.938rem;
         --fs-normal: 1.5rem;
         --fs-small: 1.125rem;
@@ -23,8 +24,8 @@ const GlobalStyle = createGlobalStyle`
 
     body {
         font-family: var(--ff-primary);
-        background-color: var(--clr-dark);
         color: var(--clr-light);
+        line-height: 1.5;
     }
 `
 export default GlobalStyle
