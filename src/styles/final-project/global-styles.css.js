@@ -11,8 +11,8 @@ const GlobalStyle = createGlobalStyle`
 
         --fs-extra-big: 2.938rem;
         --fs-big: 1.938rem;
-        --fs-normal: 1.5rem;
-        --fs-small: 1.125rem;
+        --fs-normal: 1.4rem;
+        --fs-small: 1rem;
         --fs-extra-small: 0.875rem;
         
         --clr-light: #fff;

@@ -19,7 +19,7 @@ export const UpperPart = styled.div`
         position: absolute;
         top: 0.7em;
         left: 10;
-        min-width: 275px;
+        min-width: 240px;
         min-height: 30px;
         background-color: var(--clr-primary);
         z-index: -1;
@@ -63,4 +63,41 @@ export const LowerPart = styled.div`
         font-size: var(--fs-small);
         padding: .5em 0;
     }
+
+    form {
+        margin: 2em auto;
+    }
+
+    label {
+        display: block;
+        font-size: var(--fs-small);
+        font-weight: var(--fw-bold);
+        margin-bottom: .5em;
+    }
+
+    input {
+        width: 100%;
+        padding: .7em;
+        margin-bottom: 1.5em;
+    }
+
+    textarea {
+        width: 100%;
+        padding: 2.5em;
+        margin-bottom: 1.5em;
+        resize: none;
+    }
+
+    button {
+        display: flex;
+        margin-left: auto;
+        margin-right: 0;
+        background: var(--clr-primary);
+        border: none;
+        padding: .8em 3em;
+        font-size: var(--fs-small);
+        font-weight: var(--fw-bold);
+        cursor: pointer;
+    }
+
 `

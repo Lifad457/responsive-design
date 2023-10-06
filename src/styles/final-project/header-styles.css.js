@@ -66,6 +66,10 @@ export const Burger = styled.div`
             }
         `
     };
+
+    @media (min-width: 600px) {
+        display: none;
+    }
 `
 
 export const Navigation = styled.div`
@@ -89,6 +93,10 @@ export const Navigation = styled.div`
         font-weight: var(--fw-bold);
     }
 
+    a.active { 
+      border-bottom: 3px var(--clr-primary) solid;
+    }
+
     li {
         list-style: none;
         padding-bottom: 2em;
@@ -98,5 +106,30 @@ export const Navigation = styled.div`
             display: none;
             transform: translateX(100%);
         `
+    } 
+
+    @media (min-width: 600px) {
+        display: flex;
+        flex-direction: row;
+        position: relative;
+        height: auto;
+        width: auto;
+        background-color: transparent;
+        transform: translateX(0%);
+        padding: 0;
+
+        a {
+            color: var(--clr-light);
+            font-size: var(--fs-small);
+            font-weight: var(--fw-bold);
+        }
+
+        a.active { 
+          border-bottom: 3px var(--clr-primary) solid;
+        }
+
+        li {
+            padding: 0 1em;
+        }
     }
 `
