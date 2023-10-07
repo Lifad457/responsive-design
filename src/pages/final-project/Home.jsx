@@ -10,12 +10,18 @@ export default function Home() {
                 <Link to="contact">contact us</Link>
             </UpperPart>
             <LowerPart>
-                <h1>About Me</h1>
-                <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
-                <h1>Our skills</h1>
-                <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
-                <h1>Get in touch</h1>
-                <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
+                <article>
+                    <h1>About Me</h1>
+                    <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
+                </article>
+                <article>
+                    <h1>Our skills</h1>
+                    <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
+                </article>
+                <article>
+                    <h1>Get in touch</h1>
+                    <p>Netus et malesuada fames ac. Sed cras ornare arcu dui vivamus. Elementum integer enim neque volutpat ac tincidunt vitae semper.</p>
+                </article>
             </LowerPart>
         </>
     )

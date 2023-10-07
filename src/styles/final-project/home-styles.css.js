@@ -43,12 +43,15 @@ export const UpperPart = styled.div`
     }
 `
 export const LowerPart = styled.div`
-    display: flex;
-    flex-direction: column;
     padding: 3em 3em;
-    text-align: center;
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
+        
+    article {
+        display: flex;
+        flex-direction: column;
+        background-color: var(--clr-light);
+        color: var(--clr-dark);
+        text-align: center;
+    }
 
     h1 {
         font-size: var(--fs-normal);
@@ -68,15 +71,10 @@ export const LowerPart = styled.div`
         font-size: var(--fs-small);
     }
 
-    a {
-        display: inline-block;
-        width: fit-content;
-        text-decoration: none;
-        background-color: var(--clr-primary);
-        padding: 1em 1.9em;
-        font-size: var(--fs-small);
-        font-weight: var(--fw-black);
-        color: var(--clr-dark);
-        cursor: pointer;
+    @media screen and (min-width: 650px) {
+        padding: 3em 4em;
+        display: grid;
+        grid-template-columns: repeat(3, 1fr);
+        grid-gap: 4em;
     }
 `

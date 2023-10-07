@@ -15,9 +15,8 @@ export default function Header() {
             </Link>
             <Menu onClick={() => setSwitchMenu(!switchMenu)}>
                 <Burger $switchmenu={switchMenu.toString()} ></Burger>
-            </Menu>
-            <Navigation $switchmenu={switchMenu.toString()}>
-                <ul>
+
+                <Navigation $switchmenu={switchMenu.toString()}>
                     <li>
                         <NavLink to='.' end onClick={() => setSwitchMenu(!switchMenu)}>home</NavLink>
                     </li>
@@ -27,8 +26,8 @@ export default function Header() {
                     <li>
                         <NavLink to='./contact' onClick={() => setSwitchMenu(!switchMenu)}>contact</NavLink>
                     </li>
-                </ul>
-            </Navigation>
+                </Navigation>
+            </Menu>
         </Container>
     )
 }

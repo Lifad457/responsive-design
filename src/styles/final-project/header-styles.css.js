@@ -4,8 +4,11 @@ export const Container = styled.header`
     display: flex;
     justify-content: space-between;
     background-color: var(--clr-dark);
-
     padding-left: 2em;
+
+    @media screen and (min-width: 650px) {
+        justify-content: flex-start;
+    }
 `
 
 export const Logo = styled.div`
@@ -33,6 +36,7 @@ export const Burger = styled.div`
     height: 2px;
     transform-origin: center;
     transition: all .1s ease;
+    z-index: 99;
 
     &::before,
     &::after {
@@ -67,20 +71,19 @@ export const Burger = styled.div`
         `
     };
 
-    @media (min-width: 600px) {
+    @media (min-width: 650px) {
         display: none;
     }
 `
 
-export const Navigation = styled.div`
-    display: flex;
-    flex-direction: column;
-    position: absolute;
+export const Navigation = styled.ul`
+    margin: 0;
+    position: fixed;
     top: 0;
     right: 0;
     height: 100vh;
     width: 66%;
-    z-index: 98;
+    z-index: 8;
     background-color: var(--clr-dark);
     transform: translateX(0%);
     padding: 5em 2em 0;
@@ -108,16 +111,15 @@ export const Navigation = styled.div`
         `
     } 
 
-    @media (min-width: 600px) {
+    @media (min-width: 650px) {
         display: flex;
-        flex-direction: row;
         position: relative;
-        height: auto;
-        width: auto;
-        background-color: transparent;
         transform: translateX(0%);
+        background-color: none;
+        width: unset;
+        height: auto;
         padding: 0;
-
+        z-index: 99;
         a {
             color: var(--clr-light);
             font-size: var(--fs-small);
