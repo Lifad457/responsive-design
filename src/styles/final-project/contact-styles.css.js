@@ -27,23 +27,22 @@ export const UpperPart = styled.div`
 
     p {
         width: 80%;
-        margin: 2em auto;
+        margin: 0 auto;
         font-size: var(--fs-normal);
         font-weight: var(--fw-bold);
     }
-
-    img {
-        width: 100%;
-        object-fit: cover;
-        box-shadow: 7px 7px var(--clr-dark), 14px 14px var(--clr-primary);
-    }
-
 `
 
 export const LowerPart = styled.div`
     color: var(--clr-dark);
     padding: 2em 2em;
-    margin-bottom: 1em;
+
+    img {
+        width: 100%;
+        object-fit: cover;
+        box-shadow: 7px 7px var(--clr-dark), 14px 14px var(--clr-primary);
+        margin-bottom: 2em;
+    }
 
     h1 {
         font-size: var(--fs-normal);
@@ -100,4 +99,23 @@ export const LowerPart = styled.div`
         cursor: pointer;
     }
 
+    @media screen and (min-width: 650px) {
+        display: flex;
+
+        .left-col {
+            width: 50%;
+            height: 100%;
+            margin: 2em 2em 0 0;
+        }
+
+        img {
+            object-fit: contain;
+            box-shadow: 7px 7px var(--clr-dark), 14px 14px var(--clr-primary);
+        }
+
+        .right-col {
+            width: 50%;
+            margin-left: 2em;
+        }
+    }
 `

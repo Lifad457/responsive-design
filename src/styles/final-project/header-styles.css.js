@@ -8,6 +8,7 @@ export const Container = styled.header`
 
     @media screen and (min-width: 650px) {
         justify-content: flex-start;
+        align-items: center;
     }
 `
 
@@ -120,6 +121,7 @@ export const Navigation = styled.ul`
         height: auto;
         padding: 0;
         z-index: 99;
+
         a {
             color: var(--clr-light);
             font-size: var(--fs-small);

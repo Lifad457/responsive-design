@@ -7,6 +7,7 @@ export const Container = styled.footer`
     width: 100%;
     text-align: center;
     padding: 0 2em;
+    align-items: center;
 
     .social-list {
         list-style: none;
@@ -43,5 +44,27 @@ export const Container = styled.footer`
     .copyright { 
         margin: 2em;
         font-size: var(--fs-extra-small);
+    }
+
+    @media (min-width: 650px) {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: start;
+
+        .social-list {
+            margin: 2em;
+            order: 2;
+        }
+        
+        .copyright{
+            margin: 0;
+        }
+
+        .footer-desc {
+            order: 1;
+            text-align: left;
+            margin: 2em 0;
+            width: 50%;
+        }
     }
 `

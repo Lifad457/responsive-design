@@ -2,7 +2,6 @@ import styled from "styled-components";
 
 export const UpperPart = styled.div`
     color: var(--clr-dark);
-    padding: 2em 2em;
 
     h1, p {
         text-align: center;
@@ -17,8 +16,8 @@ export const UpperPart = styled.div`
     h1::before {
         content: '';
         position: absolute;
-        top: 0.7em;
-        left: 10;
+        top: .7em;
+        left: 1;
         min-width: 275px;
         min-height: 30px;
         background-color: var(--clr-primary);
@@ -31,19 +30,20 @@ export const UpperPart = styled.div`
         font-size: var(--fs-normal);
         font-weight: var(--fw-bold);
     }
-
-    img {
-        width: 100%;
-        object-fit: cover;
-        box-shadow: 7px 7px var(--clr-dark), 14px 14px var(--clr-primary);
-    }
-
 `
 
 export const LowerPart = styled.div`
     color: var(--clr-dark);
-    padding: 2em 2em;
-    margin-bottom: 1em;
+    padding: 0 2em;
+    margin-bottom: 2em;
+
+    img {
+        width: 100%;
+        height: 100%;
+        object-fit: contain;
+        box-shadow: 7px 7px var(--clr-dark), 14px 14px var(--clr-primary);
+        margin-bottom: 2em;
+    }
 
     h1 {
         font-size: var(--fs-normal);
@@ -62,5 +62,22 @@ export const LowerPart = styled.div`
     p {
         font-size: var(--fs-small);
         padding: .5em 0;
+    }
+
+    @media screen and (min-width: 650px) {
+        display: flex;
+
+        img {
+            width: 50%;
+            height: 100%;
+            margin: 2em 2em 2em 0;
+            object-fit: contain;
+            box-shadow: 7px 7px var(--clr-dark), 14px 14px var(--clr-primary);
+        }
+
+        .desc {
+            width: 50%;
+            margin-left: 2em;
+        }
     }
 `

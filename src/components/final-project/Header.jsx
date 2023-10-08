@@ -15,19 +15,19 @@ export default function Header() {
             </Link>
             <Menu onClick={() => setSwitchMenu(!switchMenu)}>
                 <Burger $switchmenu={switchMenu.toString()} ></Burger>
+            </Menu>
 
-                <Navigation $switchmenu={switchMenu.toString()}>
+            <Navigation $switchmenu={switchMenu.toString()}>
                     <li>
-                        <NavLink to='.' end onClick={() => setSwitchMenu(!switchMenu)}>home</NavLink>
+                        <NavLink to='.' end onClick={() => setSwitchMenu(false)}>home</NavLink>
                     </li>
                     <li>
-                        <NavLink to='./about' onClick={() => setSwitchMenu(!switchMenu)}>about us</NavLink>
+                        <NavLink to='./about' onClick={() => setSwitchMenu(false)}>about us</NavLink>
                     </li>
                     <li>
-                        <NavLink to='./contact' onClick={() => setSwitchMenu(!switchMenu)}>contact</NavLink>
+                        <NavLink to='./contact' onClick={() => setSwitchMenu(false)}>contact</NavLink>
                     </li>
                 </Navigation>
-            </Menu>
         </Container>
     )
 }

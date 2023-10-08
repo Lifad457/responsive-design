@@ -7,15 +7,16 @@ export default function Contact() {
             <UpperPart>
                 <h1>Contact.</h1>
                 <p>Let us know how we can help you need and we’ll drive over to your place in our Bluesmobile the following day to discuss the deal.</p>
-                <img src={contact} alt="contact" />
             </UpperPart>
 
             <LowerPart>
-               
-                <h1>Getting in touch with us</h1>
-                <p>You can either use the form or <u>send us an email</u>. I'll get back in touch with you as soon as possible!</p>
-
-                <form>
+                <div className="left-col">
+                    <img src={contact} alt="contact" />
+                
+                    <h1>Getting in touch with us</h1>
+                    <p>You can either use the form or <u>send us an email</u>. I'll get back in touch with you as soon as possible!</p>
+                </div>
+                <form className="right-col">
                     <label htmlFor="name">First Name</label>
                     <input type="text" id="name" name="name" />
 
